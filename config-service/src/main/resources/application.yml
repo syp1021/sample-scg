@@ -1,0 +1,38 @@
+server:
+  port: 8880
+
+# default
+spring:
+  profiles:
+    active: local
+
+  application:
+    name: config-service
+    version: 0.0.1
+ 
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:19010/eureka/
+
+---
+spring:
+  config:
+    activate:
+      on-profile: local
+
+# ...
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+
+# ...
+---
+spring:
+  config:
+    activate:
+      on-profile: prod

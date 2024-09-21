@@ -1,0 +1,9 @@
+   _____ ____  _   _ ______ _____ _____ 
+  / ____/ __ \| \ | |  ____|_   _/ ____|
+ | |   | |  | |  \| | |__    | || |  __ 
+ | |   | |  | | . ` |  __|   | || | |_ |
+ | |___| |__| | |\  | |     _| || |__| |
+  \_____\____/|_| \_|_|    |_____\_____|
+                                                     
+${spring.application.name} - ${spring.application.version}
+Powered by Spring Boot ${spring-boot.version}

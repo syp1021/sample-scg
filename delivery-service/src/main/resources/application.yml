@@ -1,0 +1,29 @@
+server:
+  port: 8886
+
+# default
+spring:
+  profiles:
+    active: local
+  application:
+    name: delivery-service
+    version: 0.0.1
+
+---
+spring:
+  config:
+    activate:
+      on-profile: local
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+
+# ...
+---
+spring:
+  config:
+    activate:
+      on-profile: prod

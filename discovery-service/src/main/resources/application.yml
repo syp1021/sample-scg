@@ -1,0 +1,36 @@
+server:
+  port: 19010
+
+# default
+spring:
+  profiles:
+    active: local
+  application:
+    name: discovery-service
+    version: 0.0.1
+
+# 현재 프로젝트는 유레카 서버이므로 클라이언트 역할로 자동으로 등록되는 세팅을 막아주는 설정
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+
+---
+spring:
+  config:
+    activate:
+      on-profile: local
+
+# ...
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+
+# ...
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
